@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Black Palm Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings:
+      'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  #searchInput{
+    border: none;
+  }
+  #searchInput:focus{
+    box-shadow: none;
+    border: none;
+  }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d3c5b8",
+            "background-light": "#f5f5f5",
+            "background-dark": "#111111",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative w-full max-w-md mx-auto flex flex-col min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<button class="flex items-center justify-center h-12 w-12 text-black dark:text-white">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<h2 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Black Palm Shop</h2>
+<div class="flex w-12 items-center justify-end gap-2">
+<button class="flex items-center justify-center h-12 w-12 text-black dark:text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</button>
+<button class="flex items-center justify-center h-12 w-12 text-black dark:text-white">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pb-24">
+<!-- Hero Section -->
+<section class="relative">
+<div class="relative flex items-center justify-center bg-gray-900 bg-cover bg-center aspect-[4/5] max-h-[75vh]" data-alt="Model wearing a minimalist black outfit against a stark urban background" style='background-image: url("https://www.blackpalmshop.com/themes/at_movic/assets/img/modules/appagebuilder/images/Huf%20ss23.jpg");'>
+<div class="absolute inset-0 bg-black/30"></div>
+<div class="relative text-center p-4 flex flex-col items-center">
+<h1 class="text-white tracking-light text-[32px] font-bold leading-tight px-4 text-center">FW24 Collection</h1>
+<div class="flex px-4 py-3 justify-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-black text-base font-bold leading-normal tracking-[0.015em]">
+<a href="https://gracepartners.it" class="truncate">Shop Now</a>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Links Bar -->
+<section>
+<div class="flex px-4 py-6">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-black/10 dark:bg-white/10 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-black has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-black dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">
+<span class="truncate">Men</span>
+<input checked="" class="invisible w-0" name="category-segment" type="radio" value="Men"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-black has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-black dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">
+<span class="truncate">Women</span>
+<input class="invisible w-0" name="category-segment" type="radio" value="Women"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-black has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-black dark:has-[:checked]:text-white text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">
+<span class="truncate">Accessories</span>
+<input class="invisible w-0" name="category-segment" type="radio" value="Accessories"/>
+</label>
+</div>
+</div>
+</section>
+<!-- Shop the Look Carousel -->
+<section class="py-6">
+<h2 class="px-4 text-2xl font-bold text-black dark:text-white mb-4">Shop the Look</h2>
+<div data-carousel class="flex space-x-4 overflow-x-auto px-4 pb-4 snap-x snap-mandatory scroll-smooth [-webkit-overflow-scrolling:touch] scrollbar-hide">
+<!-- Look 1 -->
+<a class="flex-shrink-0 w-3/4 snap-start" href="https://www.blackpalmshop.com/60_alpha-industries">
+<div class="relative overflow-hidden rounded-xl">
+<img draggable="false" class="aspect-[3/4] w-full object-cover" data-alt="A person in an urban setting wearing a minimalist jacket and trousers." src="https://www.blackpalmshop.com/themes/at_movic/assets/img/modules/appagebuilder/images/Alpha banner.jpg"/>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white font-semibold">Alpha industries</p>
+</div>
+</div>
+</a>
+<!-- Look 2 -->
+<a class="flex-shrink-0 w-3/4 snap-start" href="https://www.blackpalmshop.com/it/53_globe">
+<div class="relative overflow-hidden rounded-xl">
+<img draggable="false" class="aspect-[3/4] w-full object-cover" data-alt="A stylish woman in a beige coat and sunglasses." src="https://www.blackpalmshop.com/themes/at_movic/assets/img/modules/appagebuilder/images/Globe.jpg"/>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white font-semibold">Globe</p>
+</div>
+</div>
+</a>
+<!-- Look 3 -->
+<a class="flex-shrink-0 w-3/4 snap-start" href="https://www.blackpalmshop.com/45_octopus">
+<div class="relative overflow-hidden rounded-xl">
+<img draggable="false" class="aspect-[3/4] w-full object-cover" data-alt="A close-up of a person wearing multiple silver rings and a watch." src="https://www.blackpalmshop.com/themes/at_movic/assets/img/modules/appagebuilder/images/Octopus banner.jpg"/>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white font-semibold">Octopus</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- Promotion Section -->
+<section class="px-4 py-6">
+<div class="relative flex flex-col justify-end text-black dark:text-white bg-primary rounded-xl overflow-hidden aspect-[4/3]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 dark:opacity-30 mix-blend-multiply dark:mix-blend-luminosity" data-alt="A detailed shot of a black jacket with unique texture and zippers" src="https://www.blackpalmshop.com/themes/at_movic/assets/img/modules/leoslideshow/Obey%20Fall:winter%202024.jpg"/>
+<div class="relative p-6 z-10">
+<h3 class="text-xs font-semibold uppercase tracking-wider">New Drop</h3>
+<h2 class="text-3xl font-bold mt-1">Obey</h2>
+<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-black dark:bg-white text-white dark:text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<a href="https://www.blackpalmshop.com/it/25_obey" class="truncate">Shop now</a>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-20 max-w-md mx-auto">
+<div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-black/10 dark:border-white/10">
+<div class="flex justify-around items-center h-16 px-4">
+<a class="flex flex-col items-center justify-center gap-1 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined fill text-2xl">home</span>
+<span class="text-xs font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">storefront</span>
+<span class="text-xs font-medium">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">new_releases</span>
+<span class="text-xs font-medium">New</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</div>
+</nav>
+</div>
+<div id="searchOverlay" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-start justify-center pt-32 px-4 hidden">
+  <div class="bg-white dark:bg-black rounded-xl shadow-xl p-4 w-full max-w-md">
+    <input id="searchInput" type="text" placeholder="Cerca brand o prodotto..." class="w-full bg-transparent border-b border-gray-400 dark:border-gray-600 focus:outline-none text-black dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-base px-2 py-2">
+  </div>
+</div>
+<script>
+  const carousel = document.querySelector('[data-carousel]');
+  let scrollAmount = 0;
+
+  function autoScrollCarousel() {
+    if (!carousel) return;
+
+    const scrollStep = 2;
+    scrollAmount += scrollStep;
+
+    if (scrollAmount >= carousel.scrollWidth - carousel.clientWidth) {
+      scrollAmount = 0;
+    }
+
+    carousel.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  setInterval(autoScrollCarousel, 20);
+</script>
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const items = document.querySelectorAll('[data-carousel] > a');
+
+    searchInput?.addEventListener('input', function () {
+      const term = this.value.toLowerCase();
+      items.forEach(item => {
+        const label = item.querySelector('p')?.textContent?.toLowerCase() || '';
+        if (label.includes(term)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+</script>
+<script>
+    const searchBtn = document.querySelector('button span.material-symbols-outlined');
+    const searchOverlay = document.getElementById('searchOverlay');
+    const closeOnEscape = (e) => {
+      if (e.key === 'Escape') {
+        searchOverlay.classList.add('hidden');
+      }
+    };
+
+    searchBtn?.parentElement?.addEventListener('click', () => {
+      searchOverlay.classList.remove('hidden');
+      document.getElementById('searchInput').focus();
+    });
+
+    document.addEventListener('keydown', closeOnEscape);
+    searchOverlay.addEventListener('click', (e) => {
+      if (e.target === searchOverlay) {
+        searchOverlay.classList.add('hidden');
+      }
+    });
+</script>
+<script>
+    const dragContainer = document.querySelector('[data-carousel]');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    dragContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      dragContainer.classList.add('cursor-grabbing');
+      startX = e.pageX - dragContainer.offsetLeft;
+      scrollLeft = dragContainer.scrollLeft;
+    });
+
+    dragContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+      dragContainer.classList.remove('cursor-grabbing');
+    });
+
+    dragContainer.addEventListener('mouseup', () => {
+      isDown = false;
+      dragContainer.classList.remove('cursor-grabbing');
+    });
+
+    dragContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - dragContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      dragContainer.scrollLeft = scrollLeft - walk;
+    });
+  </script>
+</body></html>
