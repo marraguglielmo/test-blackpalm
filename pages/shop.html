@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Black Palm Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#d3c5b6",
+              "background-light": "#f5f5f3",
+              "background-dark": "#121212",
+              "card-light": "#ffffff",
+              "card-dark": "#1a1a1a",
+              "text-light": "#121212",
+              "text-dark": "#f5f5f3",
+              "text-muted-light": "#737373",
+              "text-muted-dark": "#a3a3a3",
+              "border-light": "#e5e5e5",
+              "border-dark": "#262626",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 flex items-center justify-between bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-text-light dark:text-text-dark">Shop</h1>
+<div class="flex items-center gap-2">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<button class="relative flex h-10 w-10 items-center justify-center rounded-full text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+<span class="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-background-dark">2</span>
+</button>
+</div>
+</header>
+<!-- Filter Chips -->
+<div class="sticky top-[60px] z-10 w-full overflow-hidden bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+<div class="flex gap-2 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-primary px-4">
+<p class="text-sm font-semibold text-background-dark">All</p>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-card-light px-4 ring-1 ring-inset ring-border-light dark:bg-card-dark dark:ring-border-dark">
+<p class="text-sm font-medium text-text-light dark:text-text-dark">Categories</p>
+<span class="material-symbols-outlined text-lg text-text-muted-light dark:text-text-muted-dark">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-card-light px-4 ring-1 ring-inset ring-border-light dark:bg-card-dark dark:ring-border-dark">
+<p class="text-sm font-medium text-text-light dark:text-text-dark">Color</p>
+<span class="material-symbols-outlined text-lg text-text-muted-light dark:text-text-muted-dark">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-card-light px-4 ring-1 ring-inset ring-border-light dark:bg-card-dark dark:ring-border-dark">
+<p class="text-sm font-medium text-text-light dark:text-text-dark">Price</p>
+<span class="material-symbols-outlined text-lg text-text-muted-light dark:text-text-muted-dark">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full bg-card-light px-4 ring-1 ring-inset ring-border-light dark:bg-card-dark dark:ring-border-dark">
+<p class="text-sm font-medium text-text-light dark:text-text-dark">Collection</p>
+<span class="material-symbols-outlined text-lg text-text-muted-light dark:text-text-muted-dark">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Image Grid -->
+<main class="flex-1 p-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-3">
+<div class="relative w-full overflow-hidden rounded-lg bg-card-light dark:bg-card-dark">
+<div class="aspect-[3/4] w-full bg-cover bg-center" data-alt="Model wearing an oversized black graphic t-shirt." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1tW_G0Xqg8X6ZqZkZBjegKaxj8QdqA0KVZGMfehas9enXNeC2GK5Cco7i2s_EZ9oLlziohqJsNDubvOdAzDry5paG3b5SpvAF4H7sLasMkT5-9l4PAk2Ts3d9kOYN2SYwcsLaJ8Y6lcYuf-POAHkkDtbEvMvtqxJ4XPyUwmeuLIeWkQ1qTu8A8FRe9dCiyPRLZo0Ga0VTM362Hudw-sZ6DZp-h4bmECxLhYorj0RMyfEcM-igyl0umGSwjXta8g3ww6ZYDlL5_95E");'></div>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-background-dark/50 text-white backdrop-blur-sm transition-transform active:scale-90">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-semibold leading-normal text-text-light dark:text-text-dark">Oversized Graphic Tee</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">$120</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="relative w-full overflow-hidden rounded-lg bg-card-light dark:bg-card-dark">
+<div class="aspect-[3/4] w-full bg-cover bg-center" data-alt="Close up of beige utility cargo pants." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYSxDDTuyhBjbH111pp-sRPyfz-e4mbF3WXVDXF_7pcj3JomRc5IJLDaV7j3l2pZpULQa2luuZpHiqKIfhkhCd6oL8gnBpI5g9TcsV43hWTrPjAV3iiA1iFPnpbA-nRBdZNDFSlebIwN9t4yhLPn3sh-y9Np7r_KhDElwA68gjR9z-csTa4CayXFIsu6N1uSkfQIFb0iEPaXCyps2tNMxHL-OMmZKBucUklLHvjUuBi1-rFYtDZd5zDvHs4awwytOqAogdi-Yt1cK1");'></div>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-background-dark/50 text-white backdrop-blur-sm transition-transform active:scale-90">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-semibold leading-normal text-text-light dark:text-text-dark">Utility Cargo Pant</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">$250</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="relative w-full overflow-hidden rounded-lg bg-card-light dark:bg-card-dark">
+<div class="aspect-[3/4] w-full bg-cover bg-center" data-alt="Model in a heavyweight off-white hoodie." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDCZYubrL_AfqLDxIU2WV7RWp4GKV5RmAC3CJApVhFX8gwgDWc7ovV7Us-p0O86iGC0oiTZKxBZMRVqKw4-N9tP18nrZxbAnr9hHKC2d4n72JeBd32ltN_BrwbBOrTMxnxMVTMrc5OhLQ81Os9asRTZvIsR4LYodOUGO6iboQAOk5Df3DuL9pjndlXnO8ckRBVF09z5Y_rE_4ZeirR1za42GIFjCTOhN9RL13LWc_k7LnGfw-W0kWd2oSJGqgnqfVPRaDw-gKOmpsDs");'></div>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-background-dark/50 text-white backdrop-blur-sm transition-transform active:scale-90">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-semibold leading-normal text-text-light dark:text-text-dark">Heavyweight Hoodie</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">$280</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="relative w-full overflow-hidden rounded-lg bg-card-light dark:bg-card-dark">
+<div class="aspect-[3/4] w-full bg-cover bg-center" data-alt="A black nylon windbreaker jacket on a hanger." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCx85qeqPnWe85FO99O9GgcnORIE7r3nsNPaeF1PaopNf_YB8M9T6TlU8RYJl09Dy-_imLyHil6Oc3BJYa2RdFb2gcEbn6o70vD04V_-Q0ebVkB3jwgaHy_ClFAQhOtSdV2HP5EegShiSQ3PBr--b9s_HGawPt3sdpiTyVlkNtoCTHchPOgjXGizaeotLYJZzgaqyotSafZwTXVfbbCSJzvpqUIjYkzfSKpZA7KLW1W439UQHwji_iKBg0h98pBBnt3zXgu-Scx1lMq");'></div>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-background-dark/50 text-white backdrop-blur-sm transition-transform active:scale-90">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-semibold leading-normal text-text-light dark:text-text-dark">Nylon Windbreaker</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">$310</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="relative w-full overflow-hidden rounded-lg bg-card-light dark:bg-card-dark">
+<div class="aspect-[3/4] w-full bg-cover bg-center" data-alt="A minimalist black beanie on a flat surface." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDalCbHOjjPlUfoNM8mCKdX4gM9qe1LC9drn0QDyJ0O4QgE0iprorcqSgNICeONPD9sj4UcH3RS7Y8Vsee7znTFzfi-iBzXuwqShLgiwME_m2io8o4qsUJ5xEJw1nkuzi-NbnSKgC5sB76uHqPsqMgDY4ZQlcXh46RZVgjggkVF9o3wrG8EGhI9Mi37GGQinWl_dTf6CgxSuJUVH7-thOgJjGtoxI-Z4mVOJPEJspHBb781HgSI57Zr0XPA6aM4gXP0wUBRZjQFCZVm");'></div>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-background-dark/50 text-white backdrop-blur-sm transition-transform active:scale-90">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-semibold leading-normal text-text-light dark:text-text-dark">Minimalist Beanie</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">$90</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="relative w-full overflow-hidden rounded-lg bg-card-light dark:bg-card-dark">
+<div class="aspect-[3/4] w-full bg-cover bg-center" data-alt="A black tech crossbody bag." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBEYTVNNillVKk46rG5M6NViGiFb4K9h_esxedJQji4PyM55UdNZiQTOk0Tw3DKHzNrJbc8pHNboVt3pdx3lwEF3w92UnWEFPO3ummJzGOaIPKgGUI0uuFXbVPZoB7mJSv-Rl3khBeSUYLhs4iXE8MfhD2_Vt5DfD61Ay5oFgcclaCHtIy2aBrovhOrL5B2SxkYdk92eiVmaSxKFAtC-7uJ11tbtqVOTo_egBRFyp0D_S568sBmxnQfek_-maxKdV35zRxW1TDO-0-m");'></div>
+<button class="absolute bottom-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-background-dark/50 text-white backdrop-blur-sm transition-transform active:scale-90">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+<div>
+<p class="text-sm font-semibold leading-normal text-text-light dark:text-text-dark">Tech Crossbody Bag</p>
+<p class="text-sm font-normal leading-normal text-text-muted-light dark:text-text-muted-dark">$150</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Nav Bar -->
+<footer class="sticky bottom-0 z-10 border-t border-border-light bg-background-light/80 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/80">
+<div class="flex items-center justify-around px-2 py-1.5">
+    <nav class="fixed bottom-0 left-0 right-0 z-20 max-w-md mx-auto">
+        <div class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-black/10 dark:border-white/10">
+          <div class="flex justify-around items-center h-16 px-4">
+            <a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-40" href="../index.html">
+              <span class="material-symbols-outlined fill text-2xl">home</span>
+              <span class="text-xs font-medium">Home</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-primary dark:text-primary" href="pages/shop.html">
+              <span class="material-symbols-outlined text-2xl">storefront</span>
+              <span class="text-xs font-bold">Shop</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400" href="new.html">
+              <span class="material-symbols-outlined text-2xl">new_releases</span>
+              <span class="text-xs font-medium">New</span>
+            </a>
+            <a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400" href="profile.html">
+              <span class="material-symbols-outlined text-2xl">person</span>
+              <span class="text-xs font-medium">Profile</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+</div>
+</footer>
+</div>
+</body></html>
