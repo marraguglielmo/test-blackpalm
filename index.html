@@ -253,11 +253,13 @@
     });
 </script>
 <script>
-    const dragContainer = document.querySelector('[data-carousel]');
+  const dragContainer = document.querySelector('[data-carousel]');
+  if (dragContainer) {
     let isDown = false;
     let startX;
     let scrollLeft;
 
+    // Desktop - mouse events
     dragContainer.addEventListener('mousedown', (e) => {
       isDown = true;
       dragContainer.classList.add('cursor-grabbing');
@@ -282,5 +284,24 @@
       const walk = (x - startX) * 2;
       dragContainer.scrollLeft = scrollLeft - walk;
     });
-  </script>
+
+    // Mobile - touch events
+    dragContainer.addEventListener('touchstart', (e) => {
+      isDown = true;
+      startX = e.touches[0].pageX - dragContainer.offsetLeft;
+      scrollLeft = dragContainer.scrollLeft;
+    });
+
+    dragContainer.addEventListener('touchend', () => {
+      isDown = false;
+    });
+
+    dragContainer.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const x = e.touches[0].pageX - dragContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      dragContainer.scrollLeft = scrollLeft - walk;
+    });
+  }
+</script>
 </body></html>
