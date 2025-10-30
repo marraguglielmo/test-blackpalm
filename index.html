@@ -214,8 +214,7 @@
   }
 
   setInterval(autoScrollCarousel, 20);
-</script>
-<script>
+
     const searchInput = document.getElementById('searchInput');
     const items = document.querySelectorAll('[data-carousel] > a');
 
@@ -230,8 +229,7 @@
         }
       });
     });
-</script>
-<script>
+
     const searchBtn = document.querySelector('button span.material-symbols-outlined');
     const searchOverlay = document.getElementById('searchOverlay');
     const closeOnEscape = (e) => {
@@ -251,57 +249,7 @@
         searchOverlay.classList.add('hidden');
       }
     });
-</script>
-<script>
-  const dragContainer = document.querySelector('[data-carousel]');
-  if (dragContainer) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
 
-    // Desktop - mouse events
-    dragContainer.addEventListener('mousedown', (e) => {
-      isDown = true;
-      dragContainer.classList.add('cursor-grabbing');
-      startX = e.pageX - dragContainer.offsetLeft;
-      scrollLeft = dragContainer.scrollLeft;
-    });
-
-    dragContainer.addEventListener('mouseleave', () => {
-      isDown = false;
-      dragContainer.classList.remove('cursor-grabbing');
-    });
-
-    dragContainer.addEventListener('mouseup', () => {
-      isDown = false;
-      dragContainer.classList.remove('cursor-grabbing');
-    });
-
-    dragContainer.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - dragContainer.offsetLeft;
-      const walk = (x - startX) * 2;
-      dragContainer.scrollLeft = scrollLeft - walk;
-    });
-
-    // Mobile - touch events
-    dragContainer.addEventListener('touchstart', (e) => {
-      isDown = true;
-      startX = e.touches[0].pageX - dragContainer.offsetLeft;
-      scrollLeft = dragContainer.scrollLeft;
-    });
-
-    dragContainer.addEventListener('touchend', () => {
-      isDown = false;
-    });
-
-    dragContainer.addEventListener('touchmove', (e) => {
-      if (!isDown) return;
-      const x = e.touches[0].pageX - dragContainer.offsetLeft;
-      const walk = (x - startX) * 2;
-      dragContainer.scrollLeft = scrollLeft - walk;
-    });
-  }
+  
 </script>
 </body></html>
